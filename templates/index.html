@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <title>MoviEvolve</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        div.sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            bottom: 0;
+            background-color: None;
+            padding: 10px;
+            font-size: 25px;
+        }
+        </style>
+    </head>
+    <body>
+        <div style="text-align: center">
+            <h1 >MoviEvolve: Find The Right Movie for You!</h1>
+            <h4>Model-based, User-based Collaborative Filtering for Film Recommendations</h4>
+        </div>
+        <article>
+            <h1>Methodology</h1>
+            <ul>
+                <li>
+                    Built a model-based, user-based collaborative filtering model
+                    that recommends movies based on the cluster group a user falls into
+                </li>
+                <li>
+                    Hierarchical agglomerative clustering technique was used to establish four clusters
+                    of users  (labeled 0 to 3)
+                </li>
+                <li>
+                    Data was collected from the GroupLens Research Group
+                </li>
+                <li>
+                    <a href src="https://doi.org/10.1145/2827872">Relevant Paper: F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems (TiiS) 5, 4: 19:1–19:19</a>
+                </li>
+                <li>
+                    The data were created by 610 users between March 29, 1996 and September 24, 2018
+                </li>
+                <li>
+                    This dataset was generated on September 26, 2018
+                </li>
+            </ul>
+        </article>
+        <br>
+        <div>
+            <h1>Input Your Ratings!</h1>
+            <h4>Ratings should be numeric values between 0 (Awful) and 5 (Great)</h2>
+            <em><h4>LEAVE INPUT BLANK IF YOU HAVE NOT SEEN THE FILM</h4></em>
+            <form action="/result" method="POST">
+                <label for=356>Forrest Gump (1994)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=356>
+                <br>
+                <label for=318>Shawshank Redemption, The (1994)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=318>
+                <br>
+                <label for=296>Pulp Fiction (1994)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=296>
+                <br>
+                <label for=593>Silence of the Lambs, The (1991)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=593>
+                <br>
+                <label for=2571>Matrix, The (1999)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=2571>
+                <br>
+                <label for=260>Star Wars: Episode IV - A New Hope (1977)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=260>
+                <br>
+                <label for=480>Jurassic Park (1993)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=480>
+                <br>
+                <label for=110>Braveheart (1995)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=110>
+                <br>
+                <label for=589>Terminator 2: Judgment Day (1991)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=589>
+                <br>
+                <label for=527>Schindler's List (1993)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=527>
+                <br>
+    
+                <label for=2>Jumanji (1995)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=1>
+                <br>
+                <label for=185>Net, The (1995)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=47>
+                <br>
+                <label for=253>Interview with the Vampire: The Vampire Chronicles (1994)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=50>
+                <br>
+                <label for=349>Clear and Present Danger (1994)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=150>
+                <br>
+                <label for=924>2001: A Space Odyssey (1968)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=1>
+                <br>
+                <label for=1258>Shining, The (1980)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=47>
+                <br>
+                <label for=3147>Green Mile, The (1999)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=50>
+                <br>
+                <label for=3996>Crouching Tiger, Hidden Dragon (Wo hu cang long) (2000)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=150>
+                <br>
+                <label for=4878>Donnie Darko (2001)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=50>
+                <br>
+                <label for=7438>Kill Bill: Vol. 2 (2004)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=150>
+                <br>
+    
+                <label for=196>Species (1995)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=150>
+                <br>
+    
+                <label for=802>Phenomenon (1996)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=150>
+                <br>
+    
+                <label for=1396>Sneakers (1992)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=150>
+                <br>
+    
+                <label for=1907>Mulan (1998)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=150>
+                <br>
+    
+                <label for=2002>Lethal Weapon 3 (1992)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=150>
+                <br>
+    
+                <label for=2076>Blue Velvet (1986)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=150>
+                <br>
+    
+                <label for=3752>Me, Myself & Irene (2000)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=150>
+                <br>
+    
+                <label for=4369>Fast and the Furious, The (2001)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=150>
+                <br>
+    
+                <label for=5902>Adaptation (2002)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=150>
+                <br>
+    
+                <label for=5995>Pianist, The (2002)</label>
+                <input type="number" max=5, min = -1, value=None, step = 0.1, id=1 name=150>
+                <br>
+    
+                <div class="sticky"><input type="submit" value="Submit"></div>
+                
+            </form>
+        </div>
+    </body>
+</html>

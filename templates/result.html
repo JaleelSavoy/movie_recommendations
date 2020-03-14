@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en-US">
+    <body>
+        <h1>You are in cluster {{cluster_group|safe}}</h1>
+        {% block content %}
+        {{data | safe}}
+        {% endblock %}
+    </body>
+</html>
